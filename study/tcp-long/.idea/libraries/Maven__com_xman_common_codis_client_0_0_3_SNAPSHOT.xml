@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.xman.common:codis-client:0.0.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/codis-client/0.0.3-SNAPSHOT/codis-client-0.0.3-20170618.033356-4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/codis-client/0.0.3-SNAPSHOT/codis-client-0.0.3-20170618.033356-4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/codis-client/0.0.3-SNAPSHOT/codis-client-0.0.3-20170618.033356-4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

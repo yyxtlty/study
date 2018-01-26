@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.xman.common:auth-acl:2.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/auth-acl/2.0.0-SNAPSHOT/auth-acl-2.0.0-20170317.063923-6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/auth-acl/2.0.0-SNAPSHOT/auth-acl-2.0.0-20170317.063923-6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/auth-acl/2.0.0-SNAPSHOT/auth-acl-2.0.0-20170317.063923-6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

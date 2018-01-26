@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="four-web:war">
+    <output-path>$PROJECT_DIR$/four-web/target</output-path>
+    <root id="archive" name="four-web.war">
+      <element id="artifact" artifact-name="four-web:war exploded" />
+    </root>
+  </artifact>
+</component>

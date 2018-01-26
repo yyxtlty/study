@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="distributed-transaction-agent" />
+        <module name="distributed-transaction-api" />
+        <module name="distributed-transaction-common" />
+        <module name="distributed-transaction-core" />
+        <module name="distributed-transaction-service" />
+        <module name="distributed-transaction-test-dubboservice1-api" />
+        <module name="distributed-transaction-test-dubboservice1-provider" />
+        <module name="distributed-transaction-test-dubboservice2-api" />
+        <module name="distributed-transaction-test-dubboservice2-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="distributed-flexible-transaction" target="1.5" />
+      <module name="distributed-transaction-agent" target="1.5" />
+      <module name="distributed-transaction-api" target="1.5" />
+      <module name="distributed-transaction-common" target="1.8" />
+      <module name="distributed-transaction-core" target="1.5" />
+      <module name="distributed-transaction-service" target="1.5" />
+      <module name="distributed-transaction-test-dubboservice1" target="1.5" />
+      <module name="distributed-transaction-test-dubboservice1-api" target="1.5" />
+      <module name="distributed-transaction-test-dubboservice1-provider" target="1.5" />
+      <module name="distributed-transaction-test-dubboservice2" target="1.5" />
+      <module name="distributed-transaction-test-dubboservice2-api" target="1.5" />
+      <module name="distributed-transaction-test-dubboservice2-provider" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="five-web:war">
+    <output-path>$PROJECT_DIR$/five-web/target</output-path>
+    <root id="archive" name="five-web.war">
+      <element id="artifact" artifact-name="five-web:war exploded" />
+    </root>
+  </artifact>
+</component>

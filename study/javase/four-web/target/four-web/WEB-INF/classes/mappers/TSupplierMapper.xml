@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.org.asean.javase.fourweb.dao.TSupplierMapper" >
+  <resultMap id="BaseResultMap" type="com.org.asean.javase.fourweb.domain.po.TSupplier" >
+    <id column="supplier_id" property="supplierId" jdbcType="BIGINT" />
+    <result column="company_code" property="companyCode" jdbcType="VARCHAR" />
+    <result column="company_type" property="companyType" jdbcType="VARCHAR" />
+    <result column="company_name" property="companyName" jdbcType="VARCHAR" />
+    <result column="registered_land" property="registeredLand" jdbcType="VARCHAR" />
+    <result column="company_legal" property="companyLegal" jdbcType="VARCHAR" />
+    <result column="company_phone" property="companyPhone" jdbcType="VARCHAR" />
+    <result column="company_address" property="companyAddress" jdbcType="VARCHAR" />
+    <result column="registered_email" property="registeredEmail" jdbcType="VARCHAR" />
+    <result column="linkman_name" property="linkmanName" jdbcType="VARCHAR" />
+    <result column="linkman_phone" property="linkmanPhone" jdbcType="VARCHAR" />
+    <result column="trade_type" property="tradeType" jdbcType="VARCHAR" />
+    <result column="product_type" property="productType" jdbcType="VARCHAR" />
+    <result column="company_desc" property="companyDesc" jdbcType="VARCHAR" />
+    <result column="company_logo" property="companyLogo" jdbcType="VARCHAR" />
+    <result column="contract_url" property="contractUrl" jdbcType="VARCHAR" />
+    <result column="license_url" property="licenseUrl" jdbcType="VARCHAR" />
+    <result column="bank_code" property="bankCode" jdbcType="VARCHAR" />
+    <result column="account_no" property="accountNo" jdbcType="VARCHAR" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="bank_address" property="bankAddress" jdbcType="VARCHAR" />
+    <result column="bank_IBAN" property="bankIban" jdbcType="VARCHAR" />
+    <result column="bank_BIC" property="bankBic" jdbcType="VARCHAR" />
+    <result column="connection_account" property="connectionAccount" jdbcType="VARCHAR" />
+    <result column="business_person" property="businessPerson" jdbcType="VARCHAR" />
+    <result column="business_phone" property="businessPhone" jdbcType="VARCHAR" />
+    <result column="supplier_status" property="supplierStatus" jdbcType="TINYINT" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="flag" property="flag" jdbcType="TINYINT" />
+    <result column="discount_type" property="discountType" jdbcType="VARCHAR" />
+    <result column="discount_rate" property="discountRate" jdbcType="REAL" />
+    <result column="procedures" property="procedures" jdbcType="REAL" />
+    <result column="tax" property="tax" jdbcType="REAL" />
+    <result column="uid" property="uid" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="shop_id" property="shopId" jdbcType="BIGINT" />
+    <result column="merchant_id" property="merchantId" jdbcType="BIGINT" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" />
+    <result column="payee_name" property="payeeName" jdbcType="VARCHAR" />
+    <result column="payee_address" property="payeeAddress" jdbcType="VARCHAR" />
+    <result column="payee_country" property="payeeCountry" jdbcType="VARCHAR" />
+    <result column="overdraft" property="overdraft" jdbcType="DOUBLE" />
+    <result column="token" property="token" jdbcType="BIGINT" />
+    <result column="park_info" property="parkInfo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    supplier_id, company_code, company_type, company_name, registered_land, company_legal, 
+    company_phone, company_address, registered_email, linkman_name, linkman_phone, trade_type, 
+    product_type, company_desc, company_logo, contract_url, license_url, bank_code, account_no, 
+    bank_name, bank_address, bank_IBAN, bank_BIC, connection_account, business_person, 
+    business_phone, supplier_status, create_date, flag, discount_type, discount_rate, 
+    procedures, tax, uid, account_id, shop_id, merchant_id, customer_name, payee_name, 
+    payee_address, payee_country, overdraft, token, park_info
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplierExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_supplier
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_supplier
+    where supplier_id = #{supplierId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_supplier
+    where supplier_id = #{supplierId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplierExample" >
+    delete from t_supplier
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplier" >
+    insert into t_supplier (supplier_id, company_code, company_type, 
+      company_name, registered_land, company_legal, 
+      company_phone, company_address, registered_email, 
+      linkman_name, linkman_phone, trade_type, 
+      product_type, company_desc, company_logo, 
+      contract_url, license_url, bank_code, 
+      account_no, bank_name, bank_address, 
+      bank_IBAN, bank_BIC, connection_account, 
+      business_person, business_phone, supplier_status, 
+      create_date, flag, discount_type, 
+      discount_rate, procedures, tax, 
+      uid, account_id, shop_id, 
+      merchant_id, customer_name, payee_name, 
+      payee_address, payee_country, overdraft, 
+      token, park_info)
+    values (#{supplierId,jdbcType=BIGINT}, #{companyCode,jdbcType=VARCHAR}, #{companyType,jdbcType=VARCHAR}, 
+      #{companyName,jdbcType=VARCHAR}, #{registeredLand,jdbcType=VARCHAR}, #{companyLegal,jdbcType=VARCHAR}, 
+      #{companyPhone,jdbcType=VARCHAR}, #{companyAddress,jdbcType=VARCHAR}, #{registeredEmail,jdbcType=VARCHAR}, 
+      #{linkmanName,jdbcType=VARCHAR}, #{linkmanPhone,jdbcType=VARCHAR}, #{tradeType,jdbcType=VARCHAR}, 
+      #{productType,jdbcType=VARCHAR}, #{companyDesc,jdbcType=VARCHAR}, #{companyLogo,jdbcType=VARCHAR}, 
+      #{contractUrl,jdbcType=VARCHAR}, #{licenseUrl,jdbcType=VARCHAR}, #{bankCode,jdbcType=VARCHAR}, 
+      #{accountNo,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}, #{bankAddress,jdbcType=VARCHAR}, 
+      #{bankIban,jdbcType=VARCHAR}, #{bankBic,jdbcType=VARCHAR}, #{connectionAccount,jdbcType=VARCHAR}, 
+      #{businessPerson,jdbcType=VARCHAR}, #{businessPhone,jdbcType=VARCHAR}, #{supplierStatus,jdbcType=TINYINT}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{flag,jdbcType=TINYINT}, #{discountType,jdbcType=VARCHAR}, 
+      #{discountRate,jdbcType=REAL}, #{procedures,jdbcType=REAL}, #{tax,jdbcType=REAL}, 
+      #{uid,jdbcType=BIGINT}, #{accountId,jdbcType=BIGINT}, #{shopId,jdbcType=BIGINT}, 
+      #{merchantId,jdbcType=BIGINT}, #{customerName,jdbcType=VARCHAR}, #{payeeName,jdbcType=VARCHAR}, 
+      #{payeeAddress,jdbcType=VARCHAR}, #{payeeCountry,jdbcType=VARCHAR}, #{overdraft,jdbcType=DOUBLE}, 
+      #{token,jdbcType=BIGINT}, #{parkInfo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplier" >
+    insert into t_supplier
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="supplierId != null" >
+        supplier_id,
+      </if>
+      <if test="companyCode != null" >
+        company_code,
+      </if>
+      <if test="companyType != null" >
+        company_type,
+      </if>
+      <if test="companyName != null" >
+        company_name,
+      </if>
+      <if test="registeredLand != null" >
+        registered_land,
+      </if>
+      <if test="companyLegal != null" >
+        company_legal,
+      </if>
+      <if test="companyPhone != null" >
+        company_phone,
+      </if>
+      <if test="companyAddress != null" >
+        company_address,
+      </if>
+      <if test="registeredEmail != null" >
+        registered_email,
+      </if>
+      <if test="linkmanName != null" >
+        linkman_name,
+      </if>
+      <if test="linkmanPhone != null" >
+        linkman_phone,
+      </if>
+      <if test="tradeType != null" >
+        trade_type,
+      </if>
+      <if test="productType != null" >
+        product_type,
+      </if>
+      <if test="companyDesc != null" >
+        company_desc,
+      </if>
+      <if test="companyLogo != null" >
+        company_logo,
+      </if>
+      <if test="contractUrl != null" >
+        contract_url,
+      </if>
+      <if test="licenseUrl != null" >
+        license_url,
+      </if>
+      <if test="bankCode != null" >
+        bank_code,
+      </if>
+      <if test="accountNo != null" >
+        account_no,
+      </if>
+      <if test="bankName != null" >
+        bank_name,
+      </if>
+      <if test="bankAddress != null" >
+        bank_address,
+      </if>
+      <if test="bankIban != null" >
+        bank_IBAN,
+      </if>
+      <if test="bankBic != null" >
+        bank_BIC,
+      </if>
+      <if test="connectionAccount != null" >
+        connection_account,
+      </if>
+      <if test="businessPerson != null" >
+        business_person,
+      </if>
+      <if test="businessPhone != null" >
+        business_phone,
+      </if>
+      <if test="supplierStatus != null" >
+        supplier_status,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="flag != null" >
+        flag,
+      </if>
+      <if test="discountType != null" >
+        discount_type,
+      </if>
+      <if test="discountRate != null" >
+        discount_rate,
+      </if>
+      <if test="procedures != null" >
+        procedures,
+      </if>
+      <if test="tax != null" >
+        tax,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="accountId != null" >
+        account_id,
+      </if>
+      <if test="shopId != null" >
+        shop_id,
+      </if>
+      <if test="merchantId != null" >
+        merchant_id,
+      </if>
+      <if test="customerName != null" >
+        customer_name,
+      </if>
+      <if test="payeeName != null" >
+        payee_name,
+      </if>
+      <if test="payeeAddress != null" >
+        payee_address,
+      </if>
+      <if test="payeeCountry != null" >
+        payee_country,
+      </if>
+      <if test="overdraft != null" >
+        overdraft,
+      </if>
+      <if test="token != null" >
+        token,
+      </if>
+      <if test="parkInfo != null" >
+        park_info,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="supplierId != null" >
+        #{supplierId,jdbcType=BIGINT},
+      </if>
+      <if test="companyCode != null" >
+        #{companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyType != null" >
+        #{companyType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null" >
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredLand != null" >
+        #{registeredLand,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLegal != null" >
+        #{companyLegal,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPhone != null" >
+        #{companyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAddress != null" >
+        #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredEmail != null" >
+        #{registeredEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="linkmanName != null" >
+        #{linkmanName,jdbcType=VARCHAR},
+      </if>
+      <if test="linkmanPhone != null" >
+        #{linkmanPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeType != null" >
+        #{tradeType,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null" >
+        #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyDesc != null" >
+        #{companyDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogo != null" >
+        #{companyLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="contractUrl != null" >
+        #{contractUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseUrl != null" >
+        #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCode != null" >
+        #{bankCode,jdbcType=VARCHAR},
+      </if>
+      <if test="accountNo != null" >
+        #{accountNo,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAddress != null" >
+        #{bankAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="bankIban != null" >
+        #{bankIban,jdbcType=VARCHAR},
+      </if>
+      <if test="bankBic != null" >
+        #{bankBic,jdbcType=VARCHAR},
+      </if>
+      <if test="connectionAccount != null" >
+        #{connectionAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPerson != null" >
+        #{businessPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPhone != null" >
+        #{businessPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierStatus != null" >
+        #{supplierStatus,jdbcType=TINYINT},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=TINYINT},
+      </if>
+      <if test="discountType != null" >
+        #{discountType,jdbcType=VARCHAR},
+      </if>
+      <if test="discountRate != null" >
+        #{discountRate,jdbcType=REAL},
+      </if>
+      <if test="procedures != null" >
+        #{procedures,jdbcType=REAL},
+      </if>
+      <if test="tax != null" >
+        #{tax,jdbcType=REAL},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="accountId != null" >
+        #{accountId,jdbcType=BIGINT},
+      </if>
+      <if test="shopId != null" >
+        #{shopId,jdbcType=BIGINT},
+      </if>
+      <if test="merchantId != null" >
+        #{merchantId,jdbcType=BIGINT},
+      </if>
+      <if test="customerName != null" >
+        #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeName != null" >
+        #{payeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeAddress != null" >
+        #{payeeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeCountry != null" >
+        #{payeeCountry,jdbcType=VARCHAR},
+      </if>
+      <if test="overdraft != null" >
+        #{overdraft,jdbcType=DOUBLE},
+      </if>
+      <if test="token != null" >
+        #{token,jdbcType=BIGINT},
+      </if>
+      <if test="parkInfo != null" >
+        #{parkInfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplierExample" resultType="java.lang.Integer" >
+    select count(*) from t_supplier
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_supplier
+    <set >
+      <if test="record.supplierId != null" >
+        supplier_id = #{record.supplierId,jdbcType=BIGINT},
+      </if>
+      <if test="record.companyCode != null" >
+        company_code = #{record.companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyType != null" >
+        company_type = #{record.companyType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyName != null" >
+        company_name = #{record.companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registeredLand != null" >
+        registered_land = #{record.registeredLand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyLegal != null" >
+        company_legal = #{record.companyLegal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyPhone != null" >
+        company_phone = #{record.companyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyAddress != null" >
+        company_address = #{record.companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registeredEmail != null" >
+        registered_email = #{record.registeredEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.linkmanName != null" >
+        linkman_name = #{record.linkmanName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.linkmanPhone != null" >
+        linkman_phone = #{record.linkmanPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tradeType != null" >
+        trade_type = #{record.tradeType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productType != null" >
+        product_type = #{record.productType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyDesc != null" >
+        company_desc = #{record.companyDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyLogo != null" >
+        company_logo = #{record.companyLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contractUrl != null" >
+        contract_url = #{record.contractUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.licenseUrl != null" >
+        license_url = #{record.licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankCode != null" >
+        bank_code = #{record.bankCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accountNo != null" >
+        account_no = #{record.accountNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankName != null" >
+        bank_name = #{record.bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankAddress != null" >
+        bank_address = #{record.bankAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankIban != null" >
+        bank_IBAN = #{record.bankIban,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankBic != null" >
+        bank_BIC = #{record.bankBic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.connectionAccount != null" >
+        connection_account = #{record.connectionAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessPerson != null" >
+        business_person = #{record.businessPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessPhone != null" >
+        business_phone = #{record.businessPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierStatus != null" >
+        supplier_status = #{record.supplierStatus,jdbcType=TINYINT},
+      </if>
+      <if test="record.createDate != null" >
+        create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.flag != null" >
+        flag = #{record.flag,jdbcType=TINYINT},
+      </if>
+      <if test="record.discountType != null" >
+        discount_type = #{record.discountType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.discountRate != null" >
+        discount_rate = #{record.discountRate,jdbcType=REAL},
+      </if>
+      <if test="record.procedures != null" >
+        procedures = #{record.procedures,jdbcType=REAL},
+      </if>
+      <if test="record.tax != null" >
+        tax = #{record.tax,jdbcType=REAL},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=BIGINT},
+      </if>
+      <if test="record.accountId != null" >
+        account_id = #{record.accountId,jdbcType=BIGINT},
+      </if>
+      <if test="record.shopId != null" >
+        shop_id = #{record.shopId,jdbcType=BIGINT},
+      </if>
+      <if test="record.merchantId != null" >
+        merchant_id = #{record.merchantId,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerName != null" >
+        customer_name = #{record.customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payeeName != null" >
+        payee_name = #{record.payeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payeeAddress != null" >
+        payee_address = #{record.payeeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payeeCountry != null" >
+        payee_country = #{record.payeeCountry,jdbcType=VARCHAR},
+      </if>
+      <if test="record.overdraft != null" >
+        overdraft = #{record.overdraft,jdbcType=DOUBLE},
+      </if>
+      <if test="record.token != null" >
+        token = #{record.token,jdbcType=BIGINT},
+      </if>
+      <if test="record.parkInfo != null" >
+        park_info = #{record.parkInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_supplier
+    set supplier_id = #{record.supplierId,jdbcType=BIGINT},
+      company_code = #{record.companyCode,jdbcType=VARCHAR},
+      company_type = #{record.companyType,jdbcType=VARCHAR},
+      company_name = #{record.companyName,jdbcType=VARCHAR},
+      registered_land = #{record.registeredLand,jdbcType=VARCHAR},
+      company_legal = #{record.companyLegal,jdbcType=VARCHAR},
+      company_phone = #{record.companyPhone,jdbcType=VARCHAR},
+      company_address = #{record.companyAddress,jdbcType=VARCHAR},
+      registered_email = #{record.registeredEmail,jdbcType=VARCHAR},
+      linkman_name = #{record.linkmanName,jdbcType=VARCHAR},
+      linkman_phone = #{record.linkmanPhone,jdbcType=VARCHAR},
+      trade_type = #{record.tradeType,jdbcType=VARCHAR},
+      product_type = #{record.productType,jdbcType=VARCHAR},
+      company_desc = #{record.companyDesc,jdbcType=VARCHAR},
+      company_logo = #{record.companyLogo,jdbcType=VARCHAR},
+      contract_url = #{record.contractUrl,jdbcType=VARCHAR},
+      license_url = #{record.licenseUrl,jdbcType=VARCHAR},
+      bank_code = #{record.bankCode,jdbcType=VARCHAR},
+      account_no = #{record.accountNo,jdbcType=VARCHAR},
+      bank_name = #{record.bankName,jdbcType=VARCHAR},
+      bank_address = #{record.bankAddress,jdbcType=VARCHAR},
+      bank_IBAN = #{record.bankIban,jdbcType=VARCHAR},
+      bank_BIC = #{record.bankBic,jdbcType=VARCHAR},
+      connection_account = #{record.connectionAccount,jdbcType=VARCHAR},
+      business_person = #{record.businessPerson,jdbcType=VARCHAR},
+      business_phone = #{record.businessPhone,jdbcType=VARCHAR},
+      supplier_status = #{record.supplierStatus,jdbcType=TINYINT},
+      create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      flag = #{record.flag,jdbcType=TINYINT},
+      discount_type = #{record.discountType,jdbcType=VARCHAR},
+      discount_rate = #{record.discountRate,jdbcType=REAL},
+      procedures = #{record.procedures,jdbcType=REAL},
+      tax = #{record.tax,jdbcType=REAL},
+      uid = #{record.uid,jdbcType=BIGINT},
+      account_id = #{record.accountId,jdbcType=BIGINT},
+      shop_id = #{record.shopId,jdbcType=BIGINT},
+      merchant_id = #{record.merchantId,jdbcType=BIGINT},
+      customer_name = #{record.customerName,jdbcType=VARCHAR},
+      payee_name = #{record.payeeName,jdbcType=VARCHAR},
+      payee_address = #{record.payeeAddress,jdbcType=VARCHAR},
+      payee_country = #{record.payeeCountry,jdbcType=VARCHAR},
+      overdraft = #{record.overdraft,jdbcType=DOUBLE},
+      token = #{record.token,jdbcType=BIGINT},
+      park_info = #{record.parkInfo,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplier" >
+    update t_supplier
+    <set >
+      <if test="companyCode != null" >
+        company_code = #{companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyType != null" >
+        company_type = #{companyType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null" >
+        company_name = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredLand != null" >
+        registered_land = #{registeredLand,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLegal != null" >
+        company_legal = #{companyLegal,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPhone != null" >
+        company_phone = #{companyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAddress != null" >
+        company_address = #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="registeredEmail != null" >
+        registered_email = #{registeredEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="linkmanName != null" >
+        linkman_name = #{linkmanName,jdbcType=VARCHAR},
+      </if>
+      <if test="linkmanPhone != null" >
+        linkman_phone = #{linkmanPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeType != null" >
+        trade_type = #{tradeType,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null" >
+        product_type = #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyDesc != null" >
+        company_desc = #{companyDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLogo != null" >
+        company_logo = #{companyLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="contractUrl != null" >
+        contract_url = #{contractUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseUrl != null" >
+        license_url = #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="bankCode != null" >
+        bank_code = #{bankCode,jdbcType=VARCHAR},
+      </if>
+      <if test="accountNo != null" >
+        account_no = #{accountNo,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        bank_name = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAddress != null" >
+        bank_address = #{bankAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="bankIban != null" >
+        bank_IBAN = #{bankIban,jdbcType=VARCHAR},
+      </if>
+      <if test="bankBic != null" >
+        bank_BIC = #{bankBic,jdbcType=VARCHAR},
+      </if>
+      <if test="connectionAccount != null" >
+        connection_account = #{connectionAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPerson != null" >
+        business_person = #{businessPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="businessPhone != null" >
+        business_phone = #{businessPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierStatus != null" >
+        supplier_status = #{supplierStatus,jdbcType=TINYINT},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flag != null" >
+        flag = #{flag,jdbcType=TINYINT},
+      </if>
+      <if test="discountType != null" >
+        discount_type = #{discountType,jdbcType=VARCHAR},
+      </if>
+      <if test="discountRate != null" >
+        discount_rate = #{discountRate,jdbcType=REAL},
+      </if>
+      <if test="procedures != null" >
+        procedures = #{procedures,jdbcType=REAL},
+      </if>
+      <if test="tax != null" >
+        tax = #{tax,jdbcType=REAL},
+      </if>
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=BIGINT},
+      </if>
+      <if test="accountId != null" >
+        account_id = #{accountId,jdbcType=BIGINT},
+      </if>
+      <if test="shopId != null" >
+        shop_id = #{shopId,jdbcType=BIGINT},
+      </if>
+      <if test="merchantId != null" >
+        merchant_id = #{merchantId,jdbcType=BIGINT},
+      </if>
+      <if test="customerName != null" >
+        customer_name = #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeName != null" >
+        payee_name = #{payeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeAddress != null" >
+        payee_address = #{payeeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeCountry != null" >
+        payee_country = #{payeeCountry,jdbcType=VARCHAR},
+      </if>
+      <if test="overdraft != null" >
+        overdraft = #{overdraft,jdbcType=DOUBLE},
+      </if>
+      <if test="token != null" >
+        token = #{token,jdbcType=BIGINT},
+      </if>
+      <if test="parkInfo != null" >
+        park_info = #{parkInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where supplier_id = #{supplierId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.org.asean.javase.fourweb.domain.po.TSupplier" >
+    update t_supplier
+    set company_code = #{companyCode,jdbcType=VARCHAR},
+      company_type = #{companyType,jdbcType=VARCHAR},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      registered_land = #{registeredLand,jdbcType=VARCHAR},
+      company_legal = #{companyLegal,jdbcType=VARCHAR},
+      company_phone = #{companyPhone,jdbcType=VARCHAR},
+      company_address = #{companyAddress,jdbcType=VARCHAR},
+      registered_email = #{registeredEmail,jdbcType=VARCHAR},
+      linkman_name = #{linkmanName,jdbcType=VARCHAR},
+      linkman_phone = #{linkmanPhone,jdbcType=VARCHAR},
+      trade_type = #{tradeType,jdbcType=VARCHAR},
+      product_type = #{productType,jdbcType=VARCHAR},
+      company_desc = #{companyDesc,jdbcType=VARCHAR},
+      company_logo = #{companyLogo,jdbcType=VARCHAR},
+      contract_url = #{contractUrl,jdbcType=VARCHAR},
+      license_url = #{licenseUrl,jdbcType=VARCHAR},
+      bank_code = #{bankCode,jdbcType=VARCHAR},
+      account_no = #{accountNo,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_address = #{bankAddress,jdbcType=VARCHAR},
+      bank_IBAN = #{bankIban,jdbcType=VARCHAR},
+      bank_BIC = #{bankBic,jdbcType=VARCHAR},
+      connection_account = #{connectionAccount,jdbcType=VARCHAR},
+      business_person = #{businessPerson,jdbcType=VARCHAR},
+      business_phone = #{businessPhone,jdbcType=VARCHAR},
+      supplier_status = #{supplierStatus,jdbcType=TINYINT},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      flag = #{flag,jdbcType=TINYINT},
+      discount_type = #{discountType,jdbcType=VARCHAR},
+      discount_rate = #{discountRate,jdbcType=REAL},
+      procedures = #{procedures,jdbcType=REAL},
+      tax = #{tax,jdbcType=REAL},
+      uid = #{uid,jdbcType=BIGINT},
+      account_id = #{accountId,jdbcType=BIGINT},
+      shop_id = #{shopId,jdbcType=BIGINT},
+      merchant_id = #{merchantId,jdbcType=BIGINT},
+      customer_name = #{customerName,jdbcType=VARCHAR},
+      payee_name = #{payeeName,jdbcType=VARCHAR},
+      payee_address = #{payeeAddress,jdbcType=VARCHAR},
+      payee_country = #{payeeCountry,jdbcType=VARCHAR},
+      overdraft = #{overdraft,jdbcType=DOUBLE},
+      token = #{token,jdbcType=BIGINT},
+      park_info = #{parkInfo,jdbcType=VARCHAR}
+    where supplier_id = #{supplierId,jdbcType=BIGINT}
+  </update>
+</mapper>

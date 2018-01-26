@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="seven-web:war">
+    <output-path>$PROJECT_DIR$/seven-web/target</output-path>
+    <root id="archive" name="seven-web.war">
+      <element id="artifact" artifact-name="seven-web:war exploded" />
+    </root>
+  </artifact>
+</component>

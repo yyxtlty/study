@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/first-web" />
+    <file type="web" url="file://$PROJECT_DIR$/five-web" />
+    <file type="web" url="file://$PROJECT_DIR$/four-web" />
+    <file type="web" url="file://$PROJECT_DIR$/second-web" />
+    <file type="web" url="file://$PROJECT_DIR$/seven-web" />
+    <file type="web" url="file://$PROJECT_DIR$/third-web" />
+    <file type="web" url="file://$PROJECT_DIR$/zk-web" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/io/pom.xml" />
+        <option value="$PROJECT_DIR$/thrift-regist/pom.xml" />
+        <option value="$PROJECT_DIR$/thrift-client/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../git_core/javase/io/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.xman.common:thrift-rpc:0.0.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/thrift-rpc/0.0.4-SNAPSHOT/thrift-rpc-0.0.4-20160926.094734-4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/thrift-rpc/0.0.4-SNAPSHOT/thrift-rpc-0.0.4-20160926.094734-4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Tools/mavenRepository/com/xman/common/thrift-rpc/0.0.4-SNAPSHOT/thrift-rpc-0.0.4-20160926.094734-4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

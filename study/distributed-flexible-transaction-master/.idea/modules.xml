@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/distributed-flexible-transaction.iml" filepath="$PROJECT_DIR$/distributed-flexible-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-agent/distributed-transaction-agent.iml" filepath="$PROJECT_DIR$/distributed-transaction-agent/distributed-transaction-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-api/distributed-transaction-api.iml" filepath="$PROJECT_DIR$/distributed-transaction-api/distributed-transaction-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-common/distributed-transaction-common.iml" filepath="$PROJECT_DIR$/distributed-transaction-common/distributed-transaction-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-core/distributed-transaction-core.iml" filepath="$PROJECT_DIR$/distributed-transaction-core/distributed-transaction-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-service/distributed-transaction-service.iml" filepath="$PROJECT_DIR$/distributed-transaction-service/distributed-transaction-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1.iml" filepath="$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1-api/distributed-transaction-test-dubboservice1-api.iml" filepath="$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1-api/distributed-transaction-test-dubboservice1-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1-provider/distributed-transaction-test-dubboservice1-provider.iml" filepath="$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1-provider/distributed-transaction-test-dubboservice1-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2.iml" filepath="$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2-api/distributed-transaction-test-dubboservice2-api.iml" filepath="$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2-api/distributed-transaction-test-dubboservice2-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2-provider/distributed-transaction-test-dubboservice2-provider.iml" filepath="$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2-provider/distributed-transaction-test-dubboservice2-provider.iml" />
+    </modules>
+  </component>
+</project>

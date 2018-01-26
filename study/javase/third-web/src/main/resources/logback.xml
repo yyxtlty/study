@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="false" scanPeriod="60000" debug="true">
+
+    <property name="APP_NAME" value="${log.app.name}" />
+    <property name="LOG_HOME" value="${log.home}" />
+    <property name="LOG_KEEP_TIME" value="60" />
+
+    <contextName>${APP_NAME}</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-4level] [%logger{36}] [%msg]%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-4level] [%logger{36}] [%msg]%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/nova.${APP_NAME}.debug.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>${LOG_KEEP_TIME}</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-4level] [%logger{36}] [%msg]%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/nova.${APP_NAME}.info.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>${LOG_KEEP_TIME}</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-4level] [%logger{36}] - [%msg]%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/nova.${APP_NAME}.error.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>${LOG_KEEP_TIME}</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="THRIFT_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-4level] [%logger{36}] - [%msg]%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/nova.${APP_NAME}.thrift.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>${LOG_KEEP_TIME}</MaxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="EXPRESS_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] [%logger{36}:%line] - [%msg]%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/nova.${APP_NAME}.express.%d{yyyy-MM}.log</FileNamePattern>
+            <MaxHistory>6</MaxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="ch.qos.logback" level="ERROR" additivity="true" />
+    <logger name="org.springframework" level="INFO" additivity="true" />
+    <!--<logger name="com.xiaoju.ecom.rpc" level="INFO" additivity="false">
+        <appender-ref ref="THRIFT_FILE" />
+    </logger>-->
+    <logger name="com.xman.rainbow.car" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="DEBUG_FILE" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </logger>
+
+    <logger name="com.xiaoju.fcar.bis.express.logger" level="INFO" additivity="false">
+        <appender-ref ref="EXPRESS_FILE" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-agent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-service/src/main/java/com/distributed/transaction/service/dubbo/launcher/TransactionServiceLauncher.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice1/distributed-transaction-test-dubboservice1-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction-test-dubboservice2/distributed-transaction-test-dubboservice2-provider" charset="UTF-8" />
+  </component>
+</project>

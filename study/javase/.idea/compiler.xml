@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="first-web" />
+        <module name="five-web" />
+        <module name="four-web" />
+        <module name="io" />
+        <module name="kafka" />
+        <module name="mina" />
+        <module name="second-web" />
+        <module name="seven-web" />
+        <module name="six-web" />
+        <module name="socket" />
+        <module name="third-web" />
+        <module name="thrift" />
+        <module name="thrift-client" />
+        <module name="thrift-regist" />
+        <module name="thrift-server" />
+        <module name="tl1218" />
+        <module name="zk-curator" />
+        <module name="zk-spring" />
+        <module name="zk-thrift" />
+        <module name="zk-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="first-web" target="1.8" />
+      <module name="five-web" target="1.8" />
+      <module name="four-web" target="1.8" />
+      <module name="io" target="1.8" />
+      <module name="io (2)" target="1.5" />
+      <module name="javase" target="1.8" />
+      <module name="kafka" target="1.8" />
+      <module name="mina" target="1.8" />
+      <module name="second-web" target="1.8" />
+      <module name="seven-web" target="1.8" />
+      <module name="six-web" target="1.8" />
+      <module name="socket" target="1.8" />
+      <module name="third-web" target="1.8" />
+      <module name="thrift" target="1.8" />
+      <module name="thrift-client" target="1.8" />
+      <module name="thrift-regist" target="1.8" />
+      <module name="thrift-server" target="1.8" />
+      <module name="tl1218" target="1.8" />
+      <module name="zk-curator" target="1.8" />
+      <module name="zk-spring" target="1.8" />
+      <module name="zk-thrift" target="1.8" />
+      <module name="zk-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

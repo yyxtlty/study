@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.org.asean.javase</groupId>
+    <artifactId>javase</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>io</module>
+        <module>thrift</module>
+        <module>thrift-server</module>
+        <module>socket</module>
+        <module>tl1218</module>
+        <module>zk-curator</module>
+        <module>zk-thrift</module>
+        <module>mina</module>
+        <module>kafka</module>
+        <module>zk-spring</module>
+        <module>zk-web</module>
+        <module>first-web</module>
+        <module>second-web</module>
+        <module>third-web</module>
+        <module>four-web</module>
+        <module>five-web</module>
+        <module>six-web</module>
+        <module>seven-web</module>
+    </modules>
+
+
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.thrift</groupId>
+                <artifactId>libthrift</artifactId>
+                <version>0.9.3</version>
+            </dependency>
+
+          <!--  <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.25</version>
+            </dependency>-->
+
+        </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
