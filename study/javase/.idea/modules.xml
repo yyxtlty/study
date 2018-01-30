@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/first-jar/first-jar.iml" filepath="$PROJECT_DIR$/first-jar/first-jar.iml" />
       <module fileurl="file://$PROJECT_DIR$/first-web/first-web.iml" filepath="$PROJECT_DIR$/first-web/first-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/five-web/five-web.iml" filepath="$PROJECT_DIR$/five-web/five-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/four-web/four-web.iml" filepath="$PROJECT_DIR$/four-web/four-web.iml" />
@@ -11,11 +12,11 @@
       <module fileurl="file://$PROJECT_DIR$/mina/mina.iml" filepath="$PROJECT_DIR$/mina/mina.iml" />
       <module fileurl="file://$PROJECT_DIR$/second-web/second-web.iml" filepath="$PROJECT_DIR$/second-web/second-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/seven-web/seven-web.iml" filepath="$PROJECT_DIR$/seven-web/seven-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/six-web/six-web.iml" filepath="$PROJECT_DIR$/six-web/six-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket/socket.iml" filepath="$PROJECT_DIR$/socket/socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/third-web/third-web.iml" filepath="$PROJECT_DIR$/third-web/third-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift/thrift.iml" filepath="$PROJECT_DIR$/thrift/thrift.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-client/thrift-client.iml" filepath="$PROJECT_DIR$/thrift-client/thrift-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thrift-generator/thrift-generator.iml" filepath="$PROJECT_DIR$/thrift-generator/thrift-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-regist/thrift-regist.iml" filepath="$PROJECT_DIR$/thrift-regist/thrift-regist.iml" />
       <module fileurl="file://$PROJECT_DIR$/thrift-server/thrift-server.iml" filepath="$PROJECT_DIR$/thrift-server/thrift-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/tl1218/tl1218.iml" filepath="$PROJECT_DIR$/tl1218/tl1218.iml" />

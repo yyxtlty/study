@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>javase</artifactId>
+        <groupId>com.org.asean.javase</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>thrift-generator</artifactId>
+
+    <properties>
+        <thrift.executable.win.path>src/main/resources/thrift/thrift-0.9.3.exe</thrift.executable.win.path>
+        <thrift.executable.mac.path>src/main/resources/thrift/thrift</thrift.executable.mac.path>
+        <thrift.source.root>src/main/resources/thrift/idl</thrift.source.root>
+        <thrift.output.directory>src/main/java</thrift.output.directory>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- thrift -->
+            <plugin>
+                <groupId>org.apache.thrift.tools</groupId>
+                <artifactId>maven-thrift-plugin</artifactId>
+                <version>0.1.11</version>
+                <configuration>
+                    <thriftExecutable>${basedir}/${thrift.executable.mac.path}</thriftExecutable>
+                    <thriftSourceRoot>${basedir}/${thrift.source.root}</thriftSourceRoot>
+                    <outputDirectory>${basedir}/${thrift.output.directory}</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>thrift-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>thrift-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

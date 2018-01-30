@@ -27,6 +27,8 @@
         <module>five-web</module>
         <module>six-web</module>
         <module>seven-web</module>
+        <module>first-jar</module>
+        <module>thrift-generator</module>
     </modules>
 
 

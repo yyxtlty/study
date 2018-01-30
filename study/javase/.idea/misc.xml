@@ -21,6 +21,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/../../git_core/javase/io/pom.xml" />
+        <option value="$PROJECT_DIR$/six-web/pom.xml" />
       </set>
     </option>
   </component>
